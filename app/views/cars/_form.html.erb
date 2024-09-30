@@ -23,14 +23,19 @@
 
     <div>
       <%= form.label :horse_power, style: "display: block" %>
-      <%= form.text_field :horse_power %>
+      <%= form.number_field :horse_power, step: "0.01" %>
     </div>
 
     <div>
       <%= form.label :top_speed, style: "display: block" %>
-      <%= form.number_field :top_speed %>
+      <%= form.number_field :top_speed, step: "0.01" %>
     </div>
   
+    </div>
+      <%= form.label :car_price, style: "display: block" %>
+      <%= form.number_field :car_price, step: "0.01" %>
+    </div>
+
     <div>
       <%= form.label :car_model, style: "display: block" %>
       <%= form.text_field :car_model %>

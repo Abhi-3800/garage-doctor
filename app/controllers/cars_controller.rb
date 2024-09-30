@@ -38,6 +38,10 @@ class CarsController < ApplicationController
     redirect_to cars_path, notice: 'Car has been successfully destroyed'
   end
 
+  def costly_cars
+    @costly_cars = Car.where('car_price >= ?', 20.0)
+  end
+
   private
 
   def set_car
@@ -45,6 +49,6 @@ class CarsController < ApplicationController
   end
 
   def car_params
-    params.require(:car).permit(:mfg_company, :car_model, :mfg_year, :car_description, :horse_power, :top_speed, images: [])
+    params.require(:car).permit(:mfg_company, :car_model, :mfg_year, :car_description, :horse_power, :top_speed, :car_price, images: [])
   end
 end
