@@ -38,9 +38,6 @@ class CarsController < ApplicationController
     redirect_to cars_path, notice: 'Car has been successfully destroyed'
   end
 
-  def costly_cars
-    @costly_cars = Car.where(car_pr)
-
   private
 
   def set_car
