@@ -1,0 +1,62 @@
+<%= form_with(model: car) do |form| %>
+    <% if car.errors.any? %>
+      <div style="color: red">
+        <h2><%= pluralize(car.errors.count, "error") %> prohibited this car from being saved:</h2>
+  
+        <ul>
+          <% car.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div>
+      <%= form.label :images, style: "display: block" %>
+      <%= form.file_field :images, multiple: true %>
+    </div>
+
+    <div>
+      <%= form.label :mfg_company, style: "display: block" %>
+      <%= form.text_field :mfg_company %>
+    </div>
+
+    <div>
+      <%= form.label :horse_power, style: "display: block" %>
+      <%= form.text_field :horse_power %>
+    </div>
+
+    <div>
+      <%= form.label :top_speed, style: "display: block" %>
+      <%= form.number_field :top_speed %>
+    </div>
+  
+    <div>
+      <%= form.label :car_model, style: "display: block" %>
+      <%= form.text_field :car_model %>
+    </div>
+  
+    <div>
+      <%= form.label :mfg_year, style: "display: block" %>
+      <%= form.date_field :mfg_year %>
+    </div>
+
+    <div>
+      <%= form.label :transmission, style: "display: block" %>
+      <%= form.select :transmission, options_for_select(Car.transmissions.keys.map { |key| [key.humanize, key] }, selected: @car.transmission), {}, class: "form-control" %>
+    </div>
+
+    <div>
+      <%= form.label :drive_type, style: "display: block" %>
+      <%= form.select :drive_type, options_for_select(Car.drive_types.keys.map { |key| [key.humanize, key] }, selected: @car.drive_type), {}, class: "form-control" %>
+    </div>
+
+    <div>
+      <%= form.label :car_description, style: "display: block" %>
+      <%= form.text_area :car_description %>
+    </div>
+  
+    <div>
+      <%= form.submit %>
+    </div>
+<% end %>

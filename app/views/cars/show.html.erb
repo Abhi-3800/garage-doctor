@@ -1,0 +1,21 @@
+<p style="color: green"><%= notice %></p>
+<center>
+  <h1><%= @car.car_model %></h1>
+  <div class="card" style="width: 18rem;">
+    <%= image_tag @car.images.first, class: "card-img-top", alt: @car.car_model if @car.images.attached? %>
+    <div class="card-body">
+      <h5 class="card-title"><%= @car.car_model %></h5>
+      <p class="card-text"><%= @car.car_description %></p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Horse Power: <%= @car.horse_power %> Nm</li>
+      <li class="list-group-item">Top Speed: <%= @car.top_speed %> km/hr</li>
+      <li class="list-group-item">Transmission: <%= @car.transmission %></li>
+      <li class="list-group-item">Drive: <%= @car.drive_type %></li>
+    </ul>
+    <div class="card-body">
+      <%= link_to 'Home', cars_path %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <%= link_to 'Edit', edit_car_path(@car) %>
+    </div>
+  </div>
+</center>

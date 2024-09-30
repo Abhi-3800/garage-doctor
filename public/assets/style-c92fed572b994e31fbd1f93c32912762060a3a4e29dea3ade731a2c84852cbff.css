@@ -1,0 +1,24 @@
+/* Ensure the html and body take up full height */
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+/* Flexbox for body */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Content area */
+.content {
+  flex: 1; /* This makes the content area grow to fill available space */
+}
+
+/* Footer styles */
+footer {
+  background-color: #f8f9fa; /* Change the footer background color */
+  text-align: center; /* Center align text */
+  padding: 10px 0; /* Padding for footer */
+  width: 100%; /* Ensure footer is full width */
+}  

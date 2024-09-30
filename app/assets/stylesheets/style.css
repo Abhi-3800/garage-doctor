@@ -1,0 +1,10 @@
+.footer {
+  position: fixed;
+  bottom: 30px;
+  text-align: center;
+  width: 100%;
+}
+
+main {
+height: 500px;
+}

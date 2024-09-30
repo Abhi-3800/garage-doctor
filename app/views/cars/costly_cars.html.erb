@@ -1,0 +1,22 @@
+<p style="color: green"><%= notice %></p>
+<br/><center><h1>Garage Doctor</h1><center>
+
+<div id="cars" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+  <% @costly_cars.each do |car| %>
+    <div class="card" style="width: 18rem; height: 28rem; margin: 10px;">
+      <%= image_tag car.images.first, class: "card-img-top",  style: "height: 150px;", alt: car.car_model if car.images.attached? %>
+      <div class="card-body">
+        <h5 class="card-title"><%= car.car_model %></h5>
+        <p class="card-text"><%= car.car_description %></p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><strong>Transmission: </strong> <%= car.transmission %> Nm</li>
+        <li class="list-group-item"><strong>Top Speed: </strong> <%= car.top_speed %> km/hr</li>
+      </ul>
+      <div class="card-body">
+        <%= link_to "New car", new_car_path %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <%= link_to 'Edit', edit_car_path(car) %>
+      </div>
+    </div>
+  <% end %>
+</div>

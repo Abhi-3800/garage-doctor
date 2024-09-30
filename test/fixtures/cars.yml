@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  mfg_company: MyString
+  car_model: MyString
+  mfg_year: 2024-09-27
+  car_description: MyText
+  horse_power: 1.5
+  top_speed: 1.5
+
+two:
+  mfg_company: MyString
+  car_model: MyString
+  mfg_year: 2024-09-27
+  car_description: MyText
+  horse_power: 1.5
+  top_speed: 1.5
