@@ -10,6 +10,9 @@
           <li class="nav-item">
             <%= link_to 'View Cars', costly_cars_path, class: 'nav-link' %>
           </li>
+          <li class="nav-item"></li>
+            <%= link_to 'Buy/Sell', cars_path, class: 'nav-link' %>
+          </li>
           <li class="nav-item">
             <%= button_to 'Logout', destroy_user_session_path, method: :delete, class: 'nav-link logout-link', form: { class: 'd-inline' } %>
           </li>

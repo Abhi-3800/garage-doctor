@@ -73,3 +73,4 @@ end
 
 gem "bootstrap"
 gem "devise"
+gem "activeadmin"
