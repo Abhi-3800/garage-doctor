@@ -1,0 +1,100 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  bottom: 0px;
+}
+
+#hero {
+  width: 100%;
+  height: calc(120vh - 72px);
+  background-size: cover;
+  position: relative;
+  padding: 0;
+}
+
+#meet {
+  width: 100%;
+  height: calc(120vh - 72px);
+  background-size: cover;
+  position: relative;
+  margin-top: 100px;
+  padding: 0;
+}
+
+#meet h1 {
+  margin: 0 0 10px 0;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #fff;
+  font-family: Montserrat Bold;
+}
+
+#hero:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#hero .container {
+  z-index: 2;
+}
+
+#hero h1 {
+  margin: 0 0 10px 0;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #fff;
+  font-family: Montserrat Bold;
+}
+
+#hero p {
+  color: #ffffff;
+  margin: 0px 20px 20px 20px;
+  font-size: 18px;
+  font-family: Montserrat Regular;
+}
+
+#hero .btn-buy-now {
+  font-family: Montserrat Bold;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 28px;
+  border-radius: 50px;
+  transition: 0.5s;
+  background-color: #24a364;
+  border: 2px solid #24a364;
+  color: #fff;
+}
+
+#hero .btn-get-started:hover {
+  border-color: #24a364;
+  background: #24a364;
+}
+
+.logout-link {
+  background: none;
+  border: none;
+  color: #007bff; /* Change to the color of your links */
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+  font-size: inherit;
+}
+
+.logout-link:hover {
+  text-decoration: none; /* Optionally remove underline on hover */
+}
